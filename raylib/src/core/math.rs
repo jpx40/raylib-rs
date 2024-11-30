@@ -49,6 +49,15 @@ optional_serde_struct! {
     }
 }
 
+
+fn vec2(   x: f32, y: f32 ) -> Vector2 { Vector2 {
+        x, y
+    } }
+   
+fn vec3(   x: f32, y: f32 ,z: f32 ) -> Vector3 { Vector3 {
+        x, y, z
+    } }
+   
 #[cfg(feature = "nalgebra_interop")]
 impl From<na::Vector2<f32>> for Vector2 {
     fn from(v: na::Vector2<f32>) -> Vector2 {
